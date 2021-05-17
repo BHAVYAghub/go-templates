@@ -1,0 +1,9 @@
+package main
+{{range .}}
+// {{.Desc}}
+type {{.Name}} struct {
+     {{range .Fields -}}
+        {{.Name}} {{.TypeName}}
+     {{end}}
+}
+{{end}}
